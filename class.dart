@@ -16,7 +16,6 @@
 //   details.displayDetails();
 // }
 
-
 //Create a class BankAccount with attributes accountNumber and balance.
 //Add methods deposit(amount) and withdraw(amount).
 import 'dart:io';
