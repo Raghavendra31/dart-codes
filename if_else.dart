@@ -2,7 +2,7 @@
 
 // "Child" if < 13
 
-// "Teenager" if between 13 and 19
+// "Teenager" if betwen 13 and 19
 
 // "Adult" if 20 or above
 
