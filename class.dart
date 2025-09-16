@@ -8,7 +8,6 @@
 //   void displayDetails(){
 //     print("name is $name of age $age and scored $grade");
 //   }
-
 // }
 
 // void main(){
