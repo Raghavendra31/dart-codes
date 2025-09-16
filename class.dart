@@ -1,4 +1,4 @@
-// class student{
+// class tudent{
 //   String? name;
 //   int age;
 //   var grade;
