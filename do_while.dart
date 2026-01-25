@@ -1,3 +1,4 @@
+//do while loop
 void main(){
   int n = 1;
   do {
@@ -5,3 +6,5 @@ void main(){
     n++;
   }while(n<=6);
 }
+
+//hello
