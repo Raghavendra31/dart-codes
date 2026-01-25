@@ -1,79 +1,138 @@
+// import 'package:flutter/material.dart';
+
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: FirstScreen(),
+//     );
+//   }
+// }
+// class FirstScreen extends StatelessWidget {
+//   const FirstScreen({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(title: const Text("First Screen")),
+//       body: Center(
+//         child: ElevatedButton(
+//           onPressed: () {
+//             Navigator.push(
+//               context,
+//               MaterialPageRoute(
+//                 builder: (context) => const SecondScreen(),
+//               ),
+//             );
+//           },
+//           child: const Text("Go to Second Screen"),
+//         ),
+//       ),
+//     );
+//   }
+// }
+// class SecondScreen extends StatelessWidget {
+//   const SecondScreen({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(title: const Text("Second Screen")),
+//       body: Center(
+//         child: ElevatedButton(
+//           onPressed: () {
+//             Navigator.pop(context);
+//           },
+//           child: const Text("Go Back"),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
 
-void main() {
+
+void main(){
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
+  @override 
+Widget build(BuildContext context){
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: CounterPage(),
-    );
-  }
-}
+       debugShowCheckedModeBanner: false,
+       home: FirstScreen(),
+     );
+   }
+  } 
 
-// ---------------- Stateful Widget ----------------
-
-class CounterPage extends StatefulWidget {
-  const CounterPage({super.key});
+class FirstScreen extends StatelessWidget{
+  const FirstScreen({super.key});
 
   @override
-  State<CounterPage> createState() => _CounterPageState();
-}
-
-// ---------------- State Class ----------------
-
-class _CounterPageState extends State<CounterPage> {
-  int count = 0;
-
-  // Called once when widget is created
-  @override
-  void initState() {
-    super.initState();
-    print("✅ initState() called - Widget Initialized");
-  }
-
-  // Builds UI
-  @override
-  Widget build(BuildContext context) {
-    print("🔄 build() called - UI Rebuilding");
-
+  Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Flutter Lifecycle Demo"),
-        backgroundColor: Colors.blue,
-      ),
+      appBar : AppBar(title: const Text("hello first")),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Count: $count",
-              style: const TextStyle(fontSize: 28),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  count++;
-                });
-              },
-              child: const Text("Increment"),
-            ),
-          ],
-        ),
-      ),
+         child: ElevatedButton(
+           onPressed: () {
+             Navigator.push(
+               context,
+               MaterialPageRoute(
+                 builder: (context) => const SecondScreen(),
+               ),
+             );
+           },
+           child: const Text("Go to Second Screen"),
+         ),
+       ),
     );
   }
+}
 
-  // Called when widget is removed
-  @override
-  void dispose() {
-    print("❌ dispose() called - Widget Destroyed");
-    super.dispose();
+class SecondScreen extends StatelessWidget{
+  const SecondScreen({super.key});
+
+  
+@override
+  Widget build(BuildContext context){
+    return Scaffold(
+    appBar : AppBar(title: const Text("second page")),
+    body : Center(
+      child : ElevatedButton(
+        onPressed: () {
+          Navigator.pop(context);
+
+        },
+      child: const Text("go back"),
+      ),
+    ),
+    );
   }
 }
+//    @override
+//    Widget build(BuildContext context) {
+//      return Scaffold(
+//        appBar: AppBar(title: const Text("Second Screen")),
+//        body: Center(
+//          child: ElevatedButton(
+//            onPressed: () {
+//              Navigator.pop(context);
+//            },
+//            child: const Text("Go Back"),
+//          ),
+//        ),
+//      );
+//    }
+//  }
